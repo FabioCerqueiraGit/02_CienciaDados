@@ -18,7 +18,7 @@ Este repositório apresenta um projeto de Algorithmic Trading utilizando as bibl
 
 ## Estrutura do Projeto
 ```
-algorithmic-trading/
+Algorithmic_Trading/
 │── data/              # Dados financeiros coletados
 │── models/            # Modelos treinados ou baixados
 │── notebooks/         # Notebooks para exploração dos dados
@@ -34,7 +34,7 @@ algorithmic-trading/
 ## Como Executar
 1. Clone este repositório:
    ```bash
-   git clone https://github.com/seu-usuario/algorithmic-trading.git
+   git clone https://github.com/fabiocerqueiragit/algorithmic_trading.git
    ```
 2. Acesse o diretório do projeto:
    ```bash

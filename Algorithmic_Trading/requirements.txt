@@ -1,0 +1,7 @@
+pandas
+numpy
+transformers
+langchain
+langchain-huggingface
+requests
+yfinance
