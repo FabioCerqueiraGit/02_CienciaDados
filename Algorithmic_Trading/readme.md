@@ -34,7 +34,7 @@ Algorithmic_Trading/
 ## Como Executar
 1. Clone este repositório:
    ```bash
-   git clone https://github.com/fabiocerqueiragit/algorithmic_trading.git
+   git clone https://github.com/fabiocerqueiragit/Algorithmic_Trading.git
    ```
 2. Acesse o diretório do projeto:
    ```bash

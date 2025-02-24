@@ -1,7 +1,7 @@
 pandas
 numpy
+yfinance
 transformers
 langchain
-langchain-huggingface
-requests
-yfinance
+torch
+huggingface-hub

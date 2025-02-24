@@ -1,14 +1,29 @@
 import yfinance as yf
+import pandas as pd
+import os
 
-def load_data(ticker="AAPL", period="7d", interval="1h"):
+def load_financial_data(ticker, start_date, end_date, data_dir='../data'):
     """
-    Coleta dados históricos de um ativo usando Yahoo Finance.
+    Carrega dados financeiros usando yfinance e salva em um arquivo CSV.
     
-    :param ticker: Código do ativo (ex: "AAPL" para Apple).
-    :param period: Período dos dados (ex: "7d" para 7 dias).
-    :param interval: Intervalo entre os dados (ex: "1h" para 1 hora).
-    :return: DataFrame com os dados históricos.
+    :param ticker: Símbolo do ativo (ex: 'AAPL')
+    :param start_date: Data de início no formato 'YYYY-MM-DD'
+    :param end_date: Data de término no formato 'YYYY-MM-DD'
+    :param data_dir: Diretório para salvar os dados
+    :return: DataFrame com os dados financeiros
     """
-    print(f"Baixando dados para {ticker}...")
-    data = yf.download(ticker, period=period, interval=interval)
+    if not os.path.exists(data_dir):
+        os.makedirs(data_dir)
+    
+    data = yf.download(ticker, start=start_date, end=end_date)
+    file_path = os.path.join(data_dir, f'{ticker}_{start_date}_{end_date}.csv')
+    data.to_csv(file_path)
+    
     return data
+
+if __name__ == "__main__":
+    ticker = 'AAPL'
+    start_date = '2020-01-01'
+    end_date = '2023-01-01'
+    data = load_financial_data(ticker, start_date, end_date)
+    print(data.head())
